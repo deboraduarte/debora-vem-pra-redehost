@@ -106,7 +106,7 @@ class App extends Component {
               </Col>
 
               <Col md={6} lg={6} mdOffset={3} lgOffset={3}>
-                <FormGroupcontrolId="city">
+                <FormGroup controlId="city">
                   <ControlLabel>
                     Cidade:
                   </ControlLabel>
