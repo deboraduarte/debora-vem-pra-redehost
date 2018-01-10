@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import LinesMap from './LinesMap.js';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import {
         FormControl,
@@ -59,136 +60,134 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <ReactCSSTransitionGroup transitionName="fadein" transitionAppear={true} transitionAppearTimeout={5000} transitionEnter={false} transitionLeave={false}>
           <LinesMap />
-        <Col
-          md={12}
-          lg={12}
-          sm={12}
-          xs={12} >
-
-
-
           <Col
-            md={6}
-            lg={6}
-            mdOffset={3}
-            lgOffset={3}>
-          <PageHeader>
-            Location API
-            <br />
-            <small>
-              Selecione o que deseja saber
-            </small>
-          </PageHeader>
+            md={12}
+            lg={12}
+            sm={12}
+            xs={12} >
+
+
+
+            <Col
+              md={6}
+              lg={6}
+              mdOffset={3}
+              lgOffset={3}>
+              <PageHeader>
+                Location API
+                <br />
+                <small>
+                  Selecione o que deseja saber
+                </small>
+              </PageHeader>
+            </Col>
+
+            <Col
+              md={6}
+              lg={6}
+              mdOffset={3}
+              lgOffset={3}>
+              <FormGroup
+                controlId="cep"
+              >
+                <ControlLabel>
+                  Desejo saber o Endereço do seguinte CEP:
+                </ControlLabel>
+                <FormControl
+                  type="text"
+                  name="cep"
+                  value={this.state.cep}
+                  placeholder="CEP"
+                  onChange={this.onChange.bind(this)}
+                />
+                <span className="underline"></span>
+              </FormGroup>
+            </Col>
+
+            <Col
+              md={6}
+              lg={6}
+              mdOffset={3}
+              lgOffset={3}>
+            <FormGroup
+              controlId="uf">
+
+              <ControlLabel>
+                Selecione o estado:
+              </ControlLabel>
+              <FormControl
+                type="text"
+                name="uf"
+                value={this.state.uf}
+                placeholder="Estado"
+                onChange={this.onChange.bind(this)}
+              />
+              <span className="underline"></span>
+            </FormGroup>
+            </Col>
+
+            <Col
+              md={6}
+              lg={6}
+              mdOffset={3}
+              lgOffset={3}>
+              <FormGroup
+                controlId="city">
+
+                <ControlLabel>
+                  Cidade:
+                </ControlLabel>
+                <FormControl
+                  type="text"
+                  name="city"
+                  value={this.state.city}
+                  placeholder="Cidade"
+                  onChange={this.onChange.bind(this)}
+                />
+
+                <span className="underline"></span>
+              </FormGroup>
+            </Col>
+
+            <Col
+              md={6}
+              lg={6}
+              mdOffset={3}
+              lgOffset={3}>
+              <FormGroup
+                controlId="stret">
+
+                <ControlLabel>
+                  Rua:
+                </ControlLabel>
+                <FormControl
+                  type="text"
+                  name="street"
+                  value={this.state.street}
+                  placeholder="Rua"
+                  onChange={this.onChange.bind(this)}
+                />
+
+                <span className="underline"></span>
+              </FormGroup>
+            </Col>
+            <Col
+              md={6}
+              lg={6}
+              mdOffset={3}
+              lgOffset={3}>
+              <Button
+                onClick={this.handleSubmit.bind(this)}
+                bsSize="large"
+                bsStyle="primary"
+              >
+                Enviar
+              </Button>
+            </Col>
           </Col>
-
-          <Col
-            md={6}
-            lg={6}
-            mdOffset={3}
-            lgOffset={3}>
-          <FormGroup
-            controlId="cep"
-          >
-            <ControlLabel>
-              Desejo saber o Endereço do seguinte CEP:
-            </ControlLabel>
-            <FormControl
-              type="text"
-              name="cep"
-              value={this.state.cep}
-              placeholder="CEP"
-              onChange={this.onChange.bind(this)}
-            />
-            <span className="underline"></span>
-          </FormGroup>
-          </Col>
-
-          <Col
-            md={6}
-            lg={6}
-            mdOffset={3}
-            lgOffset={3}>
-          <FormGroup
-            controlId="uf">
-
-            <ControlLabel>
-              Selecione o estado:
-            </ControlLabel>
-            <FormControl
-              type="text"
-              name="uf"
-              value={this.state.uf}
-              placeholder="Estado"
-              onChange={this.onChange.bind(this)}
-            />
-
-            <span className="underline"></span>
-          </FormGroup>
-
-          </Col>
-
-          <Col
-            md={6}
-            lg={6}
-            mdOffset={3}
-            lgOffset={3}>
-          <FormGroup
-            controlId="city">
-
-            <ControlLabel>
-              Cidade:
-            </ControlLabel>
-            <FormControl
-              type="text"
-              name="city"
-              value={this.state.city}
-              placeholder="Cidade"
-              onChange={this.onChange.bind(this)}
-            />
-
-            <span className="underline"></span>
-          </FormGroup>
-          </Col>
-
-          <Col
-            md={6}
-            lg={6}
-            mdOffset={3}
-            lgOffset={3}>
-          <FormGroup
-            controlId="stret">
-
-            <ControlLabel>
-              Rua:
-            </ControlLabel>
-            <FormControl
-              type="text"
-              name="street"
-              value={this.state.street}
-              placeholder="Rua"
-              onChange={this.onChange.bind(this)}
-            />
-
-            <span className="underline"></span>
-          </FormGroup>
-          </Col>
-          <Col
-            md={6}
-            lg={6}
-            mdOffset={3}
-            lgOffset={3}>
-          <Button
-            onClick={this.handleSubmit.bind(this)}
-            bsSize="large"
-            bsStyle="primary"
-          >
-            Enviar
-          </Button>
-          </Col>
-        </Col>
-
-
+        </ReactCSSTransitionGroup>
       </div>
     );
   }
