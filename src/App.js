@@ -100,6 +100,7 @@ class App extends Component {
               placeholder="CEP"
               onChange={this.onChange.bind(this)}
             />
+            <span className="underline"></span>
           </FormGroup>
           </Col>
 
@@ -121,6 +122,8 @@ class App extends Component {
               placeholder="Estado"
               onChange={this.onChange.bind(this)}
             />
+
+            <span className="underline"></span>
           </FormGroup>
 
           </Col>
@@ -143,6 +146,8 @@ class App extends Component {
               placeholder="Cidade"
               onChange={this.onChange.bind(this)}
             />
+
+            <span className="underline"></span>
           </FormGroup>
           </Col>
 
@@ -164,6 +169,8 @@ class App extends Component {
               placeholder="Rua"
               onChange={this.onChange.bind(this)}
             />
+
+            <span className="underline"></span>
           </FormGroup>
           </Col>
           <Col
