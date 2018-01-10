@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Cep from './Cep.js';
+import LinesMap from './LinesMap.js';
 
 import {
         FormControl,
@@ -8,7 +8,7 @@ import {
         PageHeader,
         FormGroup,
         ControlLabel,
-        Col
+        Col,
       } from 'react-bootstrap';
 import axios from 'axios';
 
@@ -59,18 +59,34 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+          <LinesMap />
         <Col
-          md={6}
-          sm={6}
-          xs={6} >
+          md={12}
+          lg={12}
+          sm={12}
+          xs={12} >
 
+
+
+          <Col
+            md={6}
+            lg={6}
+            mdOffset={3}
+            lgOffset={3}>
           <PageHeader>
             Location API
+            <br />
             <small>
               Selecione o que deseja saber
             </small>
           </PageHeader>
+          </Col>
 
+          <Col
+            md={6}
+            lg={6}
+            mdOffset={3}
+            lgOffset={3}>
           <FormGroup
             controlId="cep"
           >
@@ -85,7 +101,13 @@ class App extends Component {
               onChange={this.onChange.bind(this)}
             />
           </FormGroup>
+          </Col>
 
+          <Col
+            md={6}
+            lg={6}
+            mdOffset={3}
+            lgOffset={3}>
           <FormGroup
             controlId="uf">
 
@@ -100,6 +122,14 @@ class App extends Component {
               onChange={this.onChange.bind(this)}
             />
           </FormGroup>
+
+          </Col>
+
+          <Col
+            md={6}
+            lg={6}
+            mdOffset={3}
+            lgOffset={3}>
           <FormGroup
             controlId="city">
 
@@ -114,6 +144,13 @@ class App extends Component {
               onChange={this.onChange.bind(this)}
             />
           </FormGroup>
+          </Col>
+
+          <Col
+            md={6}
+            lg={6}
+            mdOffset={3}
+            lgOffset={3}>
           <FormGroup
             controlId="stret">
 
@@ -128,7 +165,20 @@ class App extends Component {
               onChange={this.onChange.bind(this)}
             />
           </FormGroup>
-          <Button onClick={this.handleSubmit.bind(this)}> Enviar </Button>
+          </Col>
+          <Col
+            md={6}
+            lg={6}
+            mdOffset={3}
+            lgOffset={3}>
+          <Button
+            onClick={this.handleSubmit.bind(this)}
+            bsSize="large"
+            bsStyle="primary"
+          >
+            Enviar
+          </Button>
+          </Col>
         </Col>
 
 

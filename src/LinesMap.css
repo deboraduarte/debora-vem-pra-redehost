@@ -1,0 +1,35 @@
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 8s alternate-reverse infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+.LinesMap{
+  z-index: -1;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  height: 96%;
+  width: 100%;
+}
+
+.scaling-svg{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
