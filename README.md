@@ -13,12 +13,19 @@ endereço.
 deve ser feito via JavaScript.
 
 ● O desafio foi desenvolvido utilizando React.js com react-bootstrap;
+
 ● As Animações do bacrkground e os efeitos dos inputs do formulário foram feitos apenas com propriedades css, sem o uso de javascript;
+
 ● O Layout é responsivo;
+
 ● Uso do padrão EcmaScript2015+.
 
 Para começar, faça clone do repositório e instale todas as dependências:
+
 $ git clone  https://github.com/deboraduarte/debora-vem-pra-redehost
+
 $ cd debora-vem-pra-redehost
+
 $ npm install
+
 $ npm star
